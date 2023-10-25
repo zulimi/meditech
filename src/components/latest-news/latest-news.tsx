@@ -2,34 +2,43 @@ import { component$ } from "@builder.io/qwik";
 
 export default component$(() => {
   return (
-    <section class="bg-biru grid grid-cols-6 gap-0">
+    <section class="bg-biru grid grid-cols-6 gap-0 pt-[25vh]">
       <div class="col-span-2 col-start-2 h-full px-2.5 relative">
-        <div class="h-[50vh] sticky top-0 border-b border-b-white mb-[50vh]">
-          <h2 class="text-white text-4xl font-bold uppercase absolute bottom-24">Latest news</h2>
+        <div class="h-screen sticky top-0">
+          <div class="h-[50vh]">
+            <h2 class="text-white text-5xl font-bold uppercase pt-2.5">Latest News</h2>
+          </div>
+          <div>
+            <button class="border border-white text-white py-2.5 px-5 w-full">More News</button>
+          </div>
         </div>
       </div>
-      <div class="col-span-3">
-        <div class="col-span-2 h-[50vh]">
-          01
-        </div>
+      <div class="col-span-3 mb-[25vh]">
+        <div class="col-span-2 h-[50vh]"></div>
         <div>
           <div class="grid grid-cols-2 gap-0">
             <div class="w-full h-[50vh] pl-2.5">
-              kljskldjalksnlksaccnlkacnkla
+              <div class="w-full h-full bg-zinc800"></div>
             </div>
-            <div>02</div>
+            <div class="text-3xl text-white px-2.5 py-5 text-left">This is News 1</div>
           </div>
           <div class="grid grid-cols-2 gap-0">
-            <div>03</div>
-            <div class="w-full h-[50vh] pr-2.5"></div>
+            <div class="text-3xl text-white px-2.5 py-5 text-right">This is News 2</div>
+            <div class="w-full h-[50vh] pr-2.5">
+              <div class="w-full h-full bg-zinc800"></div>
+            </div>
           </div>
           <div class="grid grid-cols-2 gap-0">
-            <div class="w-full h-[50vh] pl-2.5"></div>
-            <div>04</div>
+            <div class="w-full h-[50vh] pl-2.5">
+              <div class="w-full h-full bg-zinc800"></div>
+            </div>
+            <div class="text-3xl text-white px-2.5 py-5 text-left">This is News 3</div>
           </div>
           <div class="grid grid-cols-2 gap-0">
-            <div>05</div>
-            <div class="w-full h-[50vh] pr-2.5"></div>
+            <div class="text-3xl text-white px-2.5 py-5 text-right">This is News 4</div>
+            <div class="w-full h-[50vh] pr-2.5">
+              <div class="w-full h-full bg-zinc800"></div>
+            </div>
           </div>
         </div>
       </div>

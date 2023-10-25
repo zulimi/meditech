@@ -11,7 +11,7 @@ export default component$(() => {
           </p>
         </div>
         <div class="col-span-3 p-2.5">
-          <p class="text-biru font-bold text-2xl">
+          <p class="text-biru font-bold text-3xl">
             Meditech Gloves, established in 2002, excels in manufacturing 2.4 billion natural rubber and nitrile gloves annually, globally recognized for quality.
           </p>
         </div>
