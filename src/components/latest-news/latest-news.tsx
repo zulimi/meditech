@@ -20,10 +20,10 @@ export default component$(() => {
             <div class="w-full h-[50vh] pl-2.5">
               <div class="w-full h-full bg-zinc800"></div>
             </div>
-            <div class="text-3xl text-white px-2.5 py-5 text-left">This is News 1</div>
+            <div class="text-3xl text-white px-2.5 py-5 text-left font-semibold">This is News 1</div>
           </div>
           <div class="grid grid-cols-2 gap-0">
-            <div class="text-3xl text-white px-2.5 py-5 text-right">This is News 2</div>
+            <div class="text-3xl text-white px-2.5 py-5 text-right font-semibold">This is News 2</div>
             <div class="w-full h-[50vh] pr-2.5">
               <div class="w-full h-full bg-zinc800"></div>
             </div>
@@ -32,10 +32,10 @@ export default component$(() => {
             <div class="w-full h-[50vh] pl-2.5">
               <div class="w-full h-full bg-zinc800"></div>
             </div>
-            <div class="text-3xl text-white px-2.5 py-5 text-left">This is News 3</div>
+            <div class="text-3xl text-white px-2.5 py-5 text-left font-semibold">This is News 3</div>
           </div>
           <div class="grid grid-cols-2 gap-0">
-            <div class="text-3xl text-white px-2.5 py-5 text-right">This is News 4</div>
+            <div class="text-3xl text-white px-2.5 py-5 text-right font-semibold">This is News 4</div>
             <div class="w-full h-[50vh] pr-2.5">
               <div class="w-full h-full bg-zinc800"></div>
             </div>

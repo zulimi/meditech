@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { Slot, component$ } from "@builder.io/qwik";
 import Header from "../components/header/header";
 import Introduction from "~/components/introduction/introduction";
 import LatestNews from "../components/latest-news/latest-news";
@@ -11,10 +11,7 @@ export default component$(() => {
     <>
       <Header />
       <main>
-        <Introduction />
-        <LatestNews />
-        <StrategicPartnership />
-        <InnovationCollaboration />
+        <Slot />
       </main>
       <Footer />
     </>

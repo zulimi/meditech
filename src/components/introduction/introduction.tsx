@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import MainImage from "~/media/Glove-263.jpg?jsx";
-import { HiArrowLongRightOutline, HiPlayOutline } from "@qwikest/icons/heroicons"
+import { HiArrowLongRightOutline, HiPlayOutline } from "@qwikest/icons/heroicons";
 
 export default component$(() => {
     return (
