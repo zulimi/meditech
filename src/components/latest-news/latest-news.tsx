@@ -3,7 +3,7 @@ import { fetchEntries } from "@builder.io/sdk-qwik";
 import { Image } from '@unpic/qwik';
 
 export default component$(() => {
-  const latestNewsResource = useResource$(() =>
+  const latestNewsResource = useResource$<>(() =>
     fetchEntries({
       model: "latest-news",
       apiKey: import.meta.env.PUBLIC_BUILDER_API_KEY,
