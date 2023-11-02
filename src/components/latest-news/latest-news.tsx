@@ -7,7 +7,7 @@ export default component$(() => {
     fetchEntries({
       model: "latest-news",
       apiKey: import.meta.env.PUBLIC_BUILDER_API_KEY,
-      limit: 4
+      // limit: 4
     })
   );
 
