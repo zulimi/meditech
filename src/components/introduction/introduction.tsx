@@ -1,18 +1,18 @@
 import { component$ } from "@builder.io/qwik";
-import MainImage from "~/media/Glove-263.jpg?jsx";
 import { HiArrowLongRightOutline, HiPlayOutline } from "@qwikest/icons/heroicons";
+import { Image } from '@unpic/qwik';
 
-export default component$(() => {
+export default component$((props: { welcomeTitle: string, shortDescription: string, introMedia: File }) => {
     return (
       <section class="grid grid-cols-12 grid-rows-4 gap-0 h-screen">
         <div class="col-start-3 col-span-7 p-2.5">
           <p class="text-biru font-bold text-6xl uppercase">
-            Your Source for Premium Glove Products
+            {props.welcomeTitle}
           </p>
         </div>
         <div class="col-span-3 p-2.5">
           <p class="text-biru font-bold text-3xl">
-            Meditech Gloves, established in 2002, excels in manufacturing 2.4 billion natural rubber and nitrile gloves annually, globally recognized for quality.
+            {props.shortDescription}
           </p>
         </div>
         <div class="col-start-3 col-span-7 col-end-10 p-2.5 relative">
@@ -22,7 +22,7 @@ export default component$(() => {
           </div>
         </div>
         <div class="col-span-12 row-span-2 overflow-hidden">
-          <MainImage class="object-cover w-full"></MainImage>
+          <Image src={props.introMedia} />
         </div>
       </section>
     );

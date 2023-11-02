@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { getAllContent } from "@builder.io/sdk-qwik";
 
 export default component$(() => {
   return (

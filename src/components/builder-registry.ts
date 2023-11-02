@@ -29,7 +29,22 @@ export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
   {
     component: introduction,
     name: "Introduction Section",
-    noWrap: true
+    noWrap: true,
+    inputs: [
+      {
+        name: "welcomeTitle",
+        type: "string"
+      },
+      {
+        name: "shortDescription",
+        type: "string"
+      },
+      {
+        name: 'introMedia',
+        type: 'file', 
+        allowedFileTypes: ['jpeg', 'png', 'gif'] 
+      }
+    ]
   },
   {
     component: latestNews,
