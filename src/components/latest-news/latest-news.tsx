@@ -7,10 +7,7 @@ export default component$(() => {
     fetchEntries({
       model: "latest-news",
       apiKey: import.meta.env.PUBLIC_BUILDER_API_KEY,
-      limit: 4,
-      sort: {
-        date: -1
-      }
+      limit: 4
     })
   );
 
