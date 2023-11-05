@@ -54,7 +54,28 @@ export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
   {
     component: strategicPartnership,
     name: "Strategic Partnership Section",
-    noWrap: true
+    noWrap: true,
+    inputs: [
+      {
+        name: 'description',
+        type: 'string'
+      },
+      {
+        name: 'logo1',
+        type: 'file',
+        allowedFileTypes: ['jpeg', 'png', 'gif']
+      },
+      {
+        name: 'logo2',
+        type: 'file',
+        allowedFileTypes: ['jpeg', 'png', 'gif']
+      },
+      {
+        name: 'image',
+        type: 'file',
+        allowedFileTypes: ['jpeg', 'png', 'gif']
+      }
+    ]
   },
   {
     component: innovationCollaboration,
