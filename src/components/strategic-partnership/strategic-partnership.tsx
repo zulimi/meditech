@@ -20,7 +20,7 @@ export default component$((props: { description: string, logo1: File, logo2: Fil
           <div class="w-full h-[25vh] px-2.5">
             <div class="grid grid-cols-2 gap-0 border-t border-t-biru text-biru font-semibold text-3xl py-2.5">
               <div>
-                {props.description} Meditech collaborate on innovative product design with renowned research university in UK
+                {props.description}
               </div>
               <div class="grid grid-cols-3 relative h-[25vh] content-center] py-2.5">
                 <div class="pr-2.5"><image src={props.logo1} /></div>
