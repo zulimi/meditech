@@ -1,15 +1,15 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, Resource, useResource$ } from "@builder.io/qwik";
 // import { fetchEntries } from "@builder.io/sdk-qwik";
 // import { Image } from '@unpic/qwik';
 
 export default component$(() => {
-  // const latestNewsResource = useResource$<any>(() =>
-  //   fetchEntries({
-  //     model: "latest-news",
-  //     apiKey: import.meta.env.PUBLIC_BUILDER_API_KEY,
-  //     limit: 4
-  //   })
-  // );
+  const latestNewsResource = useResource$<any>(() =>
+    fetchEntries({
+      model: "latest-news",
+      apiKey: import.meta.env.PUBLIC_BUILDER_API_KEY,
+      limit: 4
+    })
+  );
 
   return (
     // <Resource
@@ -27,6 +27,9 @@ export default component$(() => {
                 <button class="border border-white text-white py-2.5 px-5 w-full">More News</button>
               </div>
             </div>
+          </div>
+          <div>
+            {latestNewsResource}
           </div>
         </section>
     //   )}
