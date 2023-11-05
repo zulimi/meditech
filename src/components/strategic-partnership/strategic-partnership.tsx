@@ -1,9 +1,7 @@
 import { component$ } from "@builder.io/qwik";
-import CranfieldULogo from "~/media/R.png?jsx";
-import MainLogo from "~/media/LogoMeditechHD.png?jsx";
-import PartnerPhoto from "~/media/lolap.jpg?jsx";
+import { Image } from '@unpic/qwik';
 
-export default component$(() => {
+export default component$((props: { description: string, logo1: File, logo2: File, image: File }) => {
   return (
     <section class="bg-white grid grid-cols-6 gap-0 pt-[25vh]">
       <div class="col-span-2 col-start-2 h-full px-2.5 relative">
@@ -22,16 +20,16 @@ export default component$(() => {
           <div class="w-full h-[25vh] px-2.5">
             <div class="grid grid-cols-2 gap-0 border-t border-t-biru text-biru font-semibold text-3xl py-2.5">
               <div>
-                Meditech collaborate on innovative product design with renowned research university in UK
+                {props.description} Meditech collaborate on innovative product design with renowned research university in UK
               </div>
               <div class="grid grid-cols-3 relative h-[25vh] content-center] py-2.5">
-                <div class="pr-2.5"><CranfieldULogo class="h-[125px] object-contain"></CranfieldULogo></div>
-                <div class="col-span-2 pl-2.5"><MainLogo class="h-[125px] object-contain"></MainLogo></div>
+                <div class="pr-2.5"><image src={props.logo1} /></div>
+                <div class="col-span-2 pl-2.5"><image src={props.logo2} /></div>
               </div>
             </div>
           </div>
           <div class="w-full px-2.5">
-            <PartnerPhoto />
+            <Image src={props.image} />
           </div>
         </div>
       </div>
