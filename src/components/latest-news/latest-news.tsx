@@ -30,7 +30,7 @@ export default component$(() => {
           </div>
           <div class="col-span-3 mb-[25vh]">
             <div class="col-span-2 h-[50vh]"></div>
-            {latestNews.results.map((latest, index) => (
+            {latestNews.results.map((latest:any, index:any) => (
               <div key={index}>
                 {index % 2 ?
                   <div class="grid grid-cols-2 gap-0">
