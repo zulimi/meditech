@@ -1,14 +1,14 @@
-import { component$, Resource, useResource$ } from "@builder.io/qwik";
-import { fetchEntries } from "@builder.io/sdk-qwik";
-import { Image } from '@unpic/qwik';
+import { component$ } from "@builder.io/qwik";
+// import { fetchEntries } from "@builder.io/sdk-qwik";
+// import { Image } from '@unpic/qwik';
 
 export default component$(() => {
-  const latestNewsResource = useResource$<any>(() =>
-    fetchEntries({
-      model: "latest-news",
-      apiKey: import.meta.env.PUBLIC_BUILDER_API_KEY,
-      limit: 4
-    })
+  // const latestNewsResource = useResource$<any>(() =>
+  //   fetchEntries({
+  //     model: "latest-news",
+  //     apiKey: import.meta.env.PUBLIC_BUILDER_API_KEY,
+  //     limit: 4
+  //   })
   );
 
   // return (
