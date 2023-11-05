@@ -29,7 +29,7 @@ export default component$(() => {
             </div>
           </div>
           <div>
-            {latestNewsResource}
+            
           </div>
         </section>
     //   )}
