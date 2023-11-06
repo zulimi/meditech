@@ -1,6 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import MainLogo from "~/media/LogoMeditechHD.png?jsx";
 import { HiEnvelopeOutline, HiPhoneOutline } from "@qwikest/icons/heroicons";
+import { Link } from '@builder.io/qwik-city';
  
 export default component$(() => {
   return (
