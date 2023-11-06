@@ -1,6 +1,5 @@
-import { component$, useSignal, type QwikIntrinsicElements } from "@builder.io/qwik";
+import { component$, useSignal } from "@builder.io/qwik";
 import { HiArrowLongRightOutline, HiPlayOutline, HiXMarkOutline } from "@qwikest/icons/heroicons";
-import { Image } from '@unpic/qwik';
 import { Link } from '@builder.io/qwik-city';
 
 export default component$((props: { welcomeTitle: string, shortDescription: string, introMedia: File }) => {
