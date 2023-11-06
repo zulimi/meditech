@@ -48,8 +48,8 @@ export default component$(() => {
                       <Image src={latest.data.mainImage} class="object-cover w-full h-full" />
                     </div>
                     <div class="text-white px-2.5 py-5">
-                      <h3 class="font-semibold text-3xl text-right">{latest.data.title}</h3>
-                      <p class="font-dm pt-5 text-right">{latest.data.description}</p>
+                      <h3 class="font-semibold text-3xl text-left">{latest.data.title}</h3>
+                      <p class="font-dm pt-5 text-left">{latest.data.description}</p>
                     </div>
                   </div>
                 }
