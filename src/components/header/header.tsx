@@ -21,20 +21,20 @@ export default component$(() => {
         </nav>
       </div>
       <div class="w-full h-1/4 p-0">
-        <button class="relative w-full h-full p-2.5 border-t border-t-biru text-biru hover:bg-biru hover:text-white">
+        <Link class="relative block w-full h-full p-2.5 border-t border-t-biru text-biru hover:bg-biru hover:text-white cursor-pointer" href="mailto:marketing@meditechgloves.com">
           <HiEnvelopeOutline class="absolute top-2.5 left-2.5"></HiEnvelopeOutline>
-          <p class="absolute bottom-2.5 left-2.5 font-semibold">
+          <span class="absolute bottom-2.5 left-2.5 font-semibold">
             Email us
-          </p>
-        </button>
+          </span>
+        </Link>
       </div>
       <div class="w-full h-1/4 p-0">
-        <button class="relative w-full h-full p-2.5 border-t border-t-biru text-biru hover:bg-biru hover:text-white">
+        <Link class="relative block w-full h-full p-2.5 border-t border-t-biru text-biru hover:bg-biru hover:text-white cursor-pointer" href="tel:+6067997742">
           <HiPhoneOutline class="absolute top-2.5 left-2.5"></HiPhoneOutline>
           <p class="absolute bottom-2.5 left-2.5 font-semibold">
             Call us
           </p>
-        </button>
+        </Link>
       </div>
     </header>
     
