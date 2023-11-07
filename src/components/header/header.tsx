@@ -1,9 +1,18 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, Resource, useResource$ } from "@builder.io/qwik";
+import { fetchEntries } from "@builder.io/sdk-qwik";
 import MainLogo from "~/media/LogoMeditechHD.png?jsx";
 import { HiEnvelopeOutline, HiPhoneOutline } from "@qwikest/icons/heroicons";
 import { Link } from '@builder.io/qwik-city';
  
 export default component$(() => {
+
+  const navigationResource = useResource$<any>(() =>
+    fetchEntries({
+      model: "navigation",
+      apiKey: import.meta.env.PUBLIC_BUILDER_API_KEY
+    })
+  );
+
   return (
     <header class="bg-white/75 w-1/6 h-screen z-30 border-r border-r-biru fixed left-0 top-0">
       <div class="w-full h-1/4 p-2.5">
@@ -11,13 +20,18 @@ export default component$(() => {
       </div>
       <div class="relative w-full h-1/4 p-2.5">
         <nav class="absolute bottom-2.5 left-2.5">
-          <ul class="text-biru font-bold">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Products</li>
-            <li>Gallery</li>
-            <li>Contact Us</li>
-          </ul>
+          <Resource
+            value={navigationResource}
+            onPending={() => <>Loading ...</>}
+            onRejected={(error) => <>Error: {error.message}</>}
+            onResolved={(navigations) => (
+              <ul class="text-biru font-bold">
+                {navigations.results.map((link:any, index:any) => (
+                  <li key={index}><Link href={link.data.link}>{link.data.text}</Link></li>
+                ))}
+              </ul>
+            )}
+          />
         </nav>
       </div>
       <div class="w-full h-1/4 p-0">
