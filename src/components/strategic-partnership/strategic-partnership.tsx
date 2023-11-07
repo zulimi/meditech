@@ -1,7 +1,10 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useSignal } from "@builder.io/qwik";
 import { Image } from '@unpic/qwik';
+import { HiPlayOutline, HiXMarkOutline } from "@qwikest/icons/heroicons";
 
 export default component$((props: { description: string, logo1: File, logo2: File, image: File }) => {
+  const showStrategicVideo = useSignal(false);
+ 
   return (
     <section class="bg-white grid grid-cols-6 gap-0 pt-[25vh]">
       <div class="col-span-2 col-start-2 h-full px-2.5 relative">
@@ -10,7 +13,11 @@ export default component$((props: { description: string, logo1: File, logo2: Fil
             <h2 class="text-biru text-5xl font-bold uppercase pt-2.5">Strategic Partnership</h2>
           </div>
           <div>
-            <button class="border border-biru text-biru py-2.5 px-5 w-full">Learn more</button>
+            <button 
+              onClick$={() => (showStrategicVideo.value = true)}
+              class="border border-biru text-biru py-2.5 px-5 w-full">
+                Learn more <HiPlayOutline class="inline"></HiPlayOutline>
+            </button>
           </div>
         </div>
       </div>
@@ -33,6 +40,16 @@ export default component$((props: { description: string, logo1: File, logo2: Fil
           </div>
         </div>
       </div>
+      {showStrategicVideo.value &&
+        <div class="fixed w-screen h-screen z-40 backdrop-blur">
+          <video autoPlay src="https://res.cloudinary.com/zulimi/video/upload/f_auto:video,q_auto/v1/meditech-gloves/zzza3yctcg4jpmsyqlv9" class="w-full h-full"></video>
+          <button
+            onClick$={() => (showStrategicVideo.value = false)}
+            class="p-10 text-biru absolute right-0 top-0">
+            <HiXMarkOutline class="inline text-6xl"></HiXMarkOutline>
+          </button>
+        </div>
+      }
     </section>
   )
 });
