@@ -16,7 +16,7 @@ export default component$(() => {
   return (
     <header class="bg-white/75 w-1/6 h-screen z-30 border-r border-r-biru fixed left-0 top-0">
       <div class="w-full h-1/4 p-2.5">
-        <MainLogo />
+        <Link href="/"><MainLogo /></Link>
       </div>
       <div class="relative w-full h-1/4 p-2.5">
         <nav class="absolute bottom-2.5 left-2.5">
