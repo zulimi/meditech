@@ -24,7 +24,7 @@ export default component$(() => {
                 <h2 class="text-white text-5xl font-bold uppercase pt-2.5">Innovation and Collaboration</h2>
               </div>
               <div>
-                <button class="border border-white text-white py-2.5 px-5 w-full">More News</button>
+                <button class="border border-white text-white py-2.5 px-5 w-full">Contact Us Now</button>
               </div>
             </div>
           </div>

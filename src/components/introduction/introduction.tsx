@@ -31,7 +31,7 @@ export default component$((props: { welcomeTitle: string, shortDescription: stri
         <video autoPlay muted src="https://res.cloudinary.com/zulimi/video/upload/f_auto:video,q_auto/v1/meditech-gloves/htp07wxmsessv0lrqw7g" class="object-cover object-center w-full"></video>
       </div>
       {showCorporate.value &&
-        <div class="fixed w-screen h-screen z-50 backdrop-blur">
+        <div class="fixed w-screen h-screen z-40 backdrop-blur">
           <video autoPlay src="https://res.cloudinary.com/zulimi/video/upload/f_auto:video,q_auto/v1/meditech-gloves/htp07wxmsessv0lrqw7g" class="w-full h-full"></video>
           <button
             onClick$={() => (showCorporate.value = false)}

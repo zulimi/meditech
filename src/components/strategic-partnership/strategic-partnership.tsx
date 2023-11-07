@@ -41,7 +41,7 @@ export default component$((props: { description: string, logo1: File, logo2: Fil
         </div>
       </div>
       {showStrategicVideo.value &&
-        <div class="fixed w-screen h-screen z-40 backdrop-blur">
+        <div class="fixed w-screen h-full z-50 backdrop-blur left-0 top-0">
           <video autoPlay src="https://res.cloudinary.com/zulimi/video/upload/f_auto:video,q_auto/v1/meditech-gloves/zzza3yctcg4jpmsyqlv9" class="w-full h-full"></video>
           <button
             onClick$={() => (showStrategicVideo.value = false)}
