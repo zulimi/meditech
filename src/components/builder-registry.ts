@@ -4,6 +4,7 @@ import introduction from "./introduction/introduction";
 import latestNews from "./latest-news/latest-news";
 import innovationCollaboration from "./innovation-collaboration/innovation-collaboration";
 import strategicPartnership from "./strategic-partnership/strategic-partnership";
+import introductionAbout from "./introduction-about/introduction-about";
 
 /**
  * This array is used to integrate custom components within Builder.
@@ -86,5 +87,25 @@ export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
     component: innovationCollaboration,
     name: "Innovation and Collaboration Section",
     noWrap: true
-  }
+  },
+  {
+    component: introductionAbout,
+    name: "About Introduction Section",
+    noWrap: true,
+    inputs: [
+      {
+        name: "aboutTitle",
+        type: "string"
+      },
+      {
+        name: "aboutDescription",
+        type: "string"
+      },
+      {
+        name: 'introMedia',
+        type: 'file', 
+        allowedFileTypes: ['jpg', 'png', 'gif'] 
+      }
+    ]
+  },
 ];

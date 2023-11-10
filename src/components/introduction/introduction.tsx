@@ -8,12 +8,12 @@ export default component$((props: { welcomeTitle: string, shortDescription: stri
   return (
     <section class="grid grid-cols-12 grid-rows-4 gap-0 h-screen">
       <div class="col-start-3 col-span-7 p-2.5">
-        <p class="text-biru font-bold text-6xl uppercase">
+        <p class="text-biru font-bold text-8xl uppercase">
           {props.welcomeTitle}
         </p>
       </div>
       <div class="col-span-3 p-2.5">
-        <p class="text-biru font-bold text-3xl">
+        <p class="text-biru font-bold text-4xl">
           {props.shortDescription}
         </p>
       </div>
