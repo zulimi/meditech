@@ -2,7 +2,7 @@ import { component$, useSignal } from "@builder.io/qwik";
 import { Image } from '@unpic/qwik';
 import { HiPlayOutline, HiXMarkOutline } from "@qwikest/icons/heroicons";
 
-export default component$((props: { description: string, logo1: File, logo2: File, image: File }) => {
+export default component$((props: { description: string, logo1: File, logo2: File, image: File, strategicVideo: string }) => {
   const showStrategicVideo = useSignal(false);
  
   return (
@@ -42,7 +42,7 @@ export default component$((props: { description: string, logo1: File, logo2: Fil
       </div>
       {showStrategicVideo.value &&
         <div class="fixed w-screen h-full z-50 backdrop-blur left-0 top-0">
-          <video autoPlay src="https://res.cloudinary.com/zulimi/video/upload/f_auto:video,q_auto/v1/meditech-gloves/zzza3yctcg4jpmsyqlv9" class="w-full h-full"></video>
+          <video autoPlay src={props.strategicVideo} class="w-full h-full"></video>
           <button
             onClick$={() => (showStrategicVideo.value = false)}
             class="p-10 text-biru absolute right-0 top-0">

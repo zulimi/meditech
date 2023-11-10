@@ -74,6 +74,11 @@ export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
         name: 'image',
         type: 'file',
         allowedFileTypes: ['jpeg', 'png', 'gif']
+      },
+      {
+        name: 'strategicVideo',
+        type: 'file',
+        allowedFileTypes: ['mp4', 'webp']
       }
     ]
   },
