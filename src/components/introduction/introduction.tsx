@@ -2,7 +2,7 @@ import { component$, useSignal } from "@builder.io/qwik";
 import { HiArrowLongRightOutline, HiPlayOutline, HiXMarkOutline } from "@qwikest/icons/heroicons";
 import { Link } from '@builder.io/qwik-city';
 
-export default component$((props: { welcomeTitle: string, shortDescription: string, introMedia: File }) => {
+export default component$((props: { welcomeTitle: string, shortDescription: string, introMedia: string }) => {
   const showCorporate = useSignal(false);
 
   return (
