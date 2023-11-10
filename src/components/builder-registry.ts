@@ -102,7 +102,7 @@ export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
         type: "string"
       },
       {
-        name: 'introMedia',
+        name: 'aboutMedia',
         type: 'file', 
         allowedFileTypes: ['jpg', 'png', 'gif'] 
       }
