@@ -28,11 +28,11 @@ export default component$((props: { welcomeTitle: string, shortDescription: stri
         </div>
       </div>
       <div class="col-span-12 row-span-2 overflow-hidden">
-        <video autoPlay muted src="https://res.cloudinary.com/zulimi/video/upload/f_auto:video,q_auto/v1/meditech-gloves/htp07wxmsessv0lrqw7g" class="object-cover object-center w-full"></video>
+        <video autoPlay muted src={props.introMedia} class="object-cover object-center w-full"></video>
       </div>
       {showCorporate.value &&
         <div class="fixed w-screen h-screen z-40 backdrop-blur">
-          <video autoPlay src="https://res.cloudinary.com/zulimi/video/upload/f_auto:video,q_auto/v1/meditech-gloves/htp07wxmsessv0lrqw7g" class="w-full h-full"></video>
+          <video autoPlay src={props.introMedia} class="w-full h-full"></video>
           <button
             onClick$={() => (showCorporate.value = false)}
             class="p-10 text-biru absolute right-0 top-0">
