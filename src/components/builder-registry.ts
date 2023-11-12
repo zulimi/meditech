@@ -5,6 +5,8 @@ import latestNews from "./latest-news/latest-news";
 import innovationCollaboration from "./innovation-collaboration/innovation-collaboration";
 import strategicPartnership from "./strategic-partnership/strategic-partnership";
 import introductionAbout from "./introduction-about/introduction-about";
+import aboutContent from "./about-content/about-content";
+import aboutExtra from "./about-extra/about-extra";
 
 /**
  * This array is used to integrate custom components within Builder.
@@ -43,7 +45,7 @@ export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
       {
         name: 'introMedia',
         type: 'file', 
-        allowedFileTypes: ['mp4', 'webp'] 
+        allowedFileTypes: ['mp4', 'webm'] 
       }
     ]
   },
@@ -64,22 +66,22 @@ export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
       {
         name: 'logo1',
         type: 'file',
-        allowedFileTypes: ['jpeg', 'png', 'gif']
+        allowedFileTypes: ['jpeg', 'png', 'gif', 'webp']
       },
       {
         name: 'logo2',
         type: 'file',
-        allowedFileTypes: ['jpeg', 'png', 'gif']
+        allowedFileTypes: ['jpeg', 'png', 'gif', 'webp']
       },
       {
         name: 'image',
         type: 'file',
-        allowedFileTypes: ['jpeg', 'png', 'gif']
+        allowedFileTypes: ['jpeg', 'png', 'gif', 'webp']
       },
       {
         name: 'strategicVideo',
         type: 'file',
-        allowedFileTypes: ['mp4', 'webp']
+        allowedFileTypes: ['mp4', 'webm']
       }
     ]
   },
@@ -104,8 +106,32 @@ export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
       {
         name: 'aboutMedia',
         type: 'file', 
-        allowedFileTypes: ['jpg', 'png', 'gif'] 
+        allowedFileTypes: ['jpg', 'png', 'gif', 'webp'] 
       }
     ]
   },
+  {
+    component: aboutContent,
+    name: "About Content Section",
+    noWrap: true,
+    inputs: [
+      {
+        name: "aboutVideo",
+        type: "file",
+        allowedFileTypes: ['mp4', 'webm']
+      }
+    ]
+  },
+  {
+    component: aboutExtra,
+    name: "About Extra Section",
+    noWrap: true,
+    inputs: [
+      {
+        name: "extraPhoto",
+        type: "file",
+        allowedFileTypes: ['jpg', 'png', 'gif', 'webp'] 
+      }
+    ]
+  }
 ];
