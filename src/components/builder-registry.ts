@@ -8,6 +8,8 @@ import aboutContent from "./about-content/about-content";
 import aboutExtra from "./about-extra/about-extra";
 import productsIntro from "./products-intro/products-intro";
 import productsCategory from "./products-category/products-category";
+import galleryIntro from "./gallery-intro/gallery-intro";
+import contactIntro from "./contact-intro/contact-intro";
 
 /**
  * This array is used to integrate custom components within Builder.
@@ -168,6 +170,36 @@ export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
         name: 'imageExam',
         type: 'file', 
         allowedFileTypes: ['jpg', 'png', 'gif', 'webp'] 
+      }
+    ]
+  },
+  {
+    component: galleryIntro,
+    name: "Gallery Page and Sections",
+    noWrap: true,
+    inputs: [
+      {
+        name: "galleryTitle",
+        type: "string"
+      },
+      {
+        name: "galleryDescription",
+        type: "string"
+      }
+    ]
+  },
+  {
+    component: contactIntro,
+    name: "Contact Page and Sections",
+    noWrap: true,
+    inputs: [
+      {
+        name: "contactTitle",
+        type: "string"
+      },
+      {
+        name: "contactDescription",
+        type: "string"
       }
     ]
   },
