@@ -1,5 +1,4 @@
 import type { RegisteredComponent } from "@builder.io/sdk-qwik";
-import Counter from "./counter/counter";
 import introduction from "./introduction/introduction";
 import latestNews from "./latest-news/latest-news";
 import innovationCollaboration from "./innovation-collaboration/innovation-collaboration";
@@ -7,6 +6,8 @@ import strategicPartnership from "./strategic-partnership/strategic-partnership"
 import introductionAbout from "./introduction-about/introduction-about";
 import aboutContent from "./about-content/about-content";
 import aboutExtra from "./about-extra/about-extra";
+import productsIntro from "./products-intro/products-intro";
+import productsCategory from "./products-category/products-category";
 
 /**
  * This array is used to integrate custom components within Builder.
@@ -19,16 +20,9 @@ import aboutExtra from "./about-extra/about-extra";
  * https://www.builder.io/c/docs/guides/components-only-mode
  */
 export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
-  {
-    component: Counter,
-    name: "Counter",
-    inputs: [
-      {
-        name: "initialValue",
-        type: "number",
-      },
-    ],
-  },
+  /**
+   * Components Registry for Home Page
+   */
   {
     component: introduction,
     name: "Introduction Section",
@@ -90,6 +84,9 @@ export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
     name: "Innovation and Collaboration Section",
     noWrap: true
   },
+  /**
+   * Components Registry for About us Page
+   */
   {
     component: introductionAbout,
     name: "About Introduction Section",
@@ -133,5 +130,45 @@ export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
         allowedFileTypes: ['jpg', 'png', 'gif', 'webp'] 
       }
     ]
-  }
+  },
+  /**
+   * Components Registry for Products Page
+   */
+  {
+    component: productsIntro,
+    name: "Products Introduction Section",
+    noWrap: true,
+    inputs: [
+      {
+        name: "productsTitle",
+        type: "string"
+      },
+      {
+        name: "productsDescription",
+        type: "string"
+      },
+      {
+        name: 'productsMedia',
+        type: 'file', 
+        allowedFileTypes: ['jpg', 'png', 'gif', 'webp'] 
+      }
+    ]
+  },
+  {
+    component: productsCategory,
+    name: "Products Category Section",
+    noWrap: true,
+    inputs: [
+      {
+        name: 'imageSurgical',
+        type: 'file', 
+        allowedFileTypes: ['jpg', 'png', 'gif', 'webp'] 
+      },
+      {
+        name: 'imageExam',
+        type: 'file', 
+        allowedFileTypes: ['jpg', 'png', 'gif', 'webp'] 
+      }
+    ]
+  },
 ];

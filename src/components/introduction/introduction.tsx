@@ -31,7 +31,7 @@ export default component$((props: { welcomeTitle: string, shortDescription: stri
         <video autoPlay muted src={props.introMedia} class="object-cover object-center w-full"></video>
       </div>
       {showCorporate.value &&
-        <div class="fixed w-screen h-screen z-40 backdrop-blur">
+        <div class="fixed transition-transform duration-150 ease-in-out w-screen h-screen z-40 backdrop-blur">
           <video autoPlay src={props.introMedia} class="w-full h-full"></video>
           <button
             onClick$={() => (showCorporate.value = false)}
