@@ -10,6 +10,8 @@ import productsIntro from "./products-intro/products-intro";
 import productsCategory from "./products-category/products-category";
 import galleryIntro from "./gallery-intro/gallery-intro";
 import contactIntro from "./contact-intro/contact-intro";
+import header from "./header/header";
+import homeComponent from "./home-component/home-component";
 
 /**
  * This array is used to integrate custom components within Builder.
@@ -22,6 +24,14 @@ import contactIntro from "./contact-intro/contact-intro";
  * https://www.builder.io/c/docs/guides/components-only-mode
  */
 export const CUSTOM_COMPONENTS: RegisteredComponent[] = [
+  {
+    component: header,
+    name: "Header"
+  },
+  {
+    component: homeComponent,
+    name: "Home Page Component"
+  },
   /**
    * Components Registry for Home Page
    */

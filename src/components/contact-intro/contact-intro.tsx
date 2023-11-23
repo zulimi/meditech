@@ -30,7 +30,7 @@ export default component$((props: { contactTitle: string, contactDescription: st
                 Email: <a href="mailto:marketing@meditechgloves.com">marketing@meditechgloves.com</a>
               </p>
             </div>
-            <div>
+            <div class="px-2.5 text-lg">
               <p>
                   <b>Europe Market</b><br/>
                   ADVENA LIMITED<br/>
