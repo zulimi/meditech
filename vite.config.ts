@@ -6,6 +6,6 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig(() => {
   return {
-    plugins: [builderDevTools(), qwikCity(), qwikVite(), tsconfigPaths()],
+    plugins: [builderDevTools(), qwikCity(), qwikVite(), tsconfigPaths()]
   };
 });

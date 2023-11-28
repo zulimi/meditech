@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import { Image } from '@unpic/qwik';
 
-export default component$((props: { aboutTitle: string, aboutDescription: string, aboutMedia: string }) => {
+export default component$(() => {
 
   return (
 
@@ -63,7 +63,7 @@ export default component$((props: { aboutTitle: string, aboutDescription: string
         </div>
 
         <div class="col-span-7 col-start-5 row-span-8 row-start-3 bg-white shadow-md rounded-lg">
-
+          test
         </div>
 
       </section>
