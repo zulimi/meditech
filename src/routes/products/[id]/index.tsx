@@ -2,6 +2,7 @@ import { Resource, component$, useResource$ } from '@builder.io/qwik';
 import { useLocation } from '@builder.io/qwik-city';
 import { fetchOneEntry } from "@builder.io/sdk-qwik";
 import { Image } from '@unpic/qwik';
+import { Header } from '~/components/header/header';
 import { HiArrowLongDownOutline, HiArrowLongLeftOutline, HiArrowDownTrayOutline } from '@qwikest/icons/heroicons'
  
 export default component$(() => {
@@ -23,6 +24,8 @@ export default component$(() => {
       onPending={() => <>Loading ...</>}
       onRejected={(error) => <>Error: {error.message}</>}
       onResolved={(product) => (
+        <>
+        <Header />
         <div>
           <div class="bg-biru grid grid-cols-12 grid-rows-4 gap-0 h-screen text-white">
             <div class="col-start-3 col-span-7 p-2.5 relative">
@@ -75,6 +78,7 @@ export default component$(() => {
             </div>
           </div>
         </div>
+        </>
       )}
     />
   )

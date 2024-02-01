@@ -4,7 +4,7 @@ import MainLogo from "~/media/LogoMeditechHD.png?jsx";
 import { HiEnvelopeOutline, HiPhoneOutline } from "@qwikest/icons/heroicons";
 import { Link } from '@builder.io/qwik-city';
  
-export default component$(() => {
+export const Header = component$(() => {
 
   const navigationResource = useResource$<any>(() =>
     fetchEntries({
@@ -14,43 +14,53 @@ export default component$(() => {
   );
 
   return (
-    <header class="bg-white/75 w-1/6 h-screen z-30 border-r border-r-biru fixed left-0 top-0 text-lg">
-      <div class="w-full h-1/4 p-2.5">
-        <Link href="/"><MainLogo /></Link>
+    <section class="relative z-30">
+      <div class="visible md:invisible z-10 fixed left-0 top-0 h-20 w-full bg-white/75 p-2.5 border-b border-b-biru z-30">
+          <Link class="grid grid-cols-1 place-items-center h-full w-1/4" href="/"><MainLogo /></Link>
       </div>
-      <div class="relative w-full h-1/4 p-2.5">
-        <nav class="absolute bottom-2.5 left-2.5">
-          <Resource
-            value={navigationResource}
-            onPending={() => <>Loading ...</>}
-            onRejected={(error) => <>Error: {error.message}</>}
-            onResolved={(navigations) => (
-              <ul class="text-biru font-bold">
-                {navigations.results.map((link:any, index:any) => (
-                  <li key={index}><Link href={link.data.link}>{link.data.text}</Link></li>
-                ))}
-              </ul>
-            )}
-          />
-        </nav>
+      <div class="bg-white/75 w-1/6 h-screen z-30 border-r border-r-biru fixed left-0 top-0 text-lg invisible md:visible">
+        <div class="w-full h-1/4 p-2.5">
+          <Link href="/"><MainLogo /></Link>
+        </div>
+        <div class="relative w-full h-1/4 p-2.5">
+          <nav class="absolute bottom-2.5 left-2.5">
+            <Resource
+              value={navigationResource}
+              onPending={() => <>Loading ...</>}
+              onRejected={(error) => <>Error: {error.message}</>}
+              onResolved={(navigations) => (
+                <ul class="text-biru font-bold">
+                  {navigations.results.map((link:any, index:any) => (
+                    <li key={index}><Link href={link.data.link}>{link.data.text}</Link></li>
+                  ))}
+                </ul>
+              )}
+            />
+          </nav>
+        </div>
+        <div class="w-full h-1/4 p-0">
+          <Link class="relative block w-full h-full p-2.5 border-t border-t-biru text-biru hover:bg-biru hover:text-white cursor-pointer" href="mailto:marketing@meditechgloves.com">
+            <HiEnvelopeOutline class="absolute top-2.5 left-2.5"></HiEnvelopeOutline>
+            <span class="absolute bottom-2.5 left-2.5 font-semibold">
+              Email us
+            </span>
+          </Link>
+        </div>
+        <div class="w-full h-1/4 p-0">
+          <Link class="relative block w-full h-full p-2.5 border-t border-t-biru text-biru hover:bg-biru hover:text-white cursor-pointer" href="tel:+6067997742">
+            <HiPhoneOutline class="absolute top-2.5 left-2.5"></HiPhoneOutline>
+            <p class="absolute bottom-2.5 left-2.5 font-semibold">
+              Call us
+            </p>
+          </Link>
+        </div>
       </div>
-      <div class="w-full h-1/4 p-0">
-        <Link class="relative block w-full h-full p-2.5 border-t border-t-biru text-biru hover:bg-biru hover:text-white cursor-pointer" href="mailto:marketing@meditechgloves.com">
-          <HiEnvelopeOutline class="absolute top-2.5 left-2.5"></HiEnvelopeOutline>
-          <span class="absolute bottom-2.5 left-2.5 font-semibold">
-            Email us
-          </span>
-        </Link>
-      </div>
-      <div class="w-full h-1/4 p-0">
-        <Link class="relative block w-full h-full p-2.5 border-t border-t-biru text-biru hover:bg-biru hover:text-white cursor-pointer" href="tel:+6067997742">
-          <HiPhoneOutline class="absolute top-2.5 left-2.5"></HiPhoneOutline>
-          <p class="absolute bottom-2.5 left-2.5 font-semibold">
-            Call us
-          </p>
-        </Link>
-      </div>
-    </header>
-    
+    </section>    
   );
 });
+
+export default component$(() => {
+  return (
+    <Header />
+  )
+})

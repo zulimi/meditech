@@ -17,7 +17,7 @@ export default component$(() => {
       onPending={() => <>Loading ...</>}
       onRejected={(error) => <>Error: {error.message}</>}
       onResolved={(latestNews) => (
-        <section class="bg-biru grid grid-cols-6 gap-0 pt-[25vh]">
+        <section class="bg-biru grid grid-cols-6 gap-0 pt-[25vh] hidden md:block">
           <div class="col-span-2 col-start-2 h-full px-2.5 relative">
             <div class="h-screen sticky top-0">
               <div class="h-[50vh]">
