@@ -13,7 +13,7 @@ export default component$((props: { welcomeTitle: string, shortDescription: stri
         </p>
       </div>
       <div class="col-span-12 md:col-span-3 p-2.5 z-10">
-        <p class="text-biru font-bold text-lg md:text-3xl border-t border-t-biru">
+        <p class="text-biru font-bold text-lg md:text-3xl border-t border-t-biru md:border-t-0">
           {props.shortDescription}
         </p>
       </div>
@@ -27,7 +27,7 @@ export default component$((props: { welcomeTitle: string, shortDescription: stri
           </button>
         </div>
       </div>
-      <div class="absolute md:relative w-screen h-screen md:col-span-12 md:row-span-2 overflow-hidden z-0">
+      <div class="absolute md:relative w-full h-full md:col-span-12 md:row-span-2 overflow-hidden z-0">
         <video autoPlay muted src={props.introMedia} class="object-cover object-center w-full h-full"></video>
       </div>
       {showCorporate.value &&
