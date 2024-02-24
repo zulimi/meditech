@@ -17,13 +17,13 @@ export default component$((props: { welcomeTitle: string, shortDescription: stri
           {props.shortDescription}
         </p>
       </div>
-      <div class="col-start-3 col-span-7 col-end-10 p-2.5 relative z-10">
-        <div class="absolute bottom-2.5 left-2.5">
-          <Link href="/about-us" class="border border-biru bg-biru p-5 text-white">Learn more about us <span><HiArrowLongRightOutline class="inline"></HiArrowLongRightOutline></span></Link>
+      <div class="col-span-12 md:col-start-3 md:col-span-7 md:col-end-10 relative z-10">
+        <div class="absolute bottom-2.5 left-0 px-2.5 w-full flex gap-2.5">
+          <Link href="/about-us" class="border border-biru bg-biru p-5 text-white w-5/6 md:w-auto">Learn more about us <span><HiArrowLongRightOutline class="inline"></HiArrowLongRightOutline></span></Link>
           <button
             onClick$={() => (showCorporate.value = true)} 
-            class="border border-biru text-biru p-5 ml-2.5">
-              Watch video <HiPlayOutline class="inline"></HiPlayOutline>
+            class="border border-biru text-biru p-5 w-1/6 md:w-auto">
+              <span class="hidden md:inline">Watch video </span><HiPlayOutline class="inline"></HiPlayOutline>
           </button>
         </div>
       </div>
