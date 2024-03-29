@@ -2,15 +2,11 @@ import { component$, Resource, useResource$ } from "@builder.io/qwik";
 import { fetchEntries } from "@builder.io/sdk-qwik";
 import { Image } from '@unpic/qwik';
 
-interface feedProps {
-  model?: string
-}
-
 export default component$<feedProps>((props) => {
 
   const allNewsResources = useResource$<any>(() => 
     fetchEntries({
-      model: props.model,
+      model: "latest-news",
       apiKey: import.meta.env.PUBLIC_BUILDER_API_KEY
     })
   );
