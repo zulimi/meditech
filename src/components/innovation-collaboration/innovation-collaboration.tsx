@@ -57,7 +57,7 @@ export default component$(() => {
               </div>
             ))}
           </div>
-          <InnoCollabSlider model="inno-collab" limit={4} />
+          <InnoCollabSlider />
         </section>
       )}
     />
