@@ -1,6 +1,7 @@
-import { component$, Resource, useResource$ } from "@builder.io/qwik";
+import { component$, Resource, useResource$, useSignal } from "@builder.io/qwik";
 import { fetchEntries } from "@builder.io/sdk-qwik";
 import { Image } from '@unpic/qwik';
+import InnoCollabSlider from "../ui/inno-collab-slider";
 
 export default component$(() => {
   const innoCollabResource = useResource$<any>(() =>
@@ -17,18 +18,18 @@ export default component$(() => {
       onPending={() => <>Loading ...</>}
       onRejected={(error) => <>Error: {error.message}</>}
       onResolved={(innoCollabs) => (
-        <section class="bg-biru grid grid-cols-6 gap-0 pt-[25vh] hidden md:block">
-          <div class="col-span-2 col-start-2 h-full px-2.5 relative">
-            <div class="h-screen sticky top-0">
-              <div class="h-[50vh]">
-                <h2 class="text-white text-5xl font-bold uppercase pt-2.5">Innovation and Collaboration</h2>
+        <section class="bg-biru grid grid-cols-6 gap-0 md:pt-[25vh]">
+          <div class="col-span-6 md:col-span-2 md:col-start-2 h-full px-0 md:px-2.5 relative">
+            <div class="px-2.5 md:px-0 md:h-screen md:sticky top-0">
+              <div class="h-[30vh] md:h-[50vh]">
+                <h2 class="text-white text-5xl font-bold uppercase pt-[10vh] md:pt-2.5">Innovation and Collaboration</h2>
               </div>
-              <div>
-                <a href="/contact-us" class="border border-white text-white py-2.5 px-5 w-full">Contact Us Now</a>
+              <div class="w-full">
+                <a href="/contact-us" class="border border-white text-white py-2.5 px-5 w-full block text-center">Contact Us Now</a>
               </div>
             </div>
           </div>
-          <div class="col-span-3 mb-[25vh]">
+          <div class="col-span-3 mb-[25vh] hidden md:inline">
             <div class="col-span-2 h-[50vh]"></div>
             {innoCollabs.results.map((innocollab:any, index:any) => (
               <div key={index}>
@@ -56,6 +57,7 @@ export default component$(() => {
               </div>
             ))}
           </div>
+          <InnoCollabSlider model="inno-collab" limit={4} />
         </section>
       )}
     />

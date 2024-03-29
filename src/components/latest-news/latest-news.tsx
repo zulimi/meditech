@@ -1,6 +1,7 @@
 import { component$, Resource, useResource$ } from "@builder.io/qwik";
 import { fetchEntries } from "@builder.io/sdk-qwik";
 import { Image } from '@unpic/qwik';
+import LatestNewsSlider from "../ui/latest-news-slider";
 
 export default component$(() => {
   const latestNewsResource = useResource$<any>(() =>
@@ -8,13 +9,6 @@ export default component$(() => {
       model: "latest-news",
       apiKey: import.meta.env.PUBLIC_BUILDER_API_KEY,
       limit: 4
-    })
-  );
-
-  const allNewsResource = useResource$<any>(() =>
-    fetchEntries({
-      model: "latest-news",
-      apiKey: import.meta.env.PUBLIC_BUILDER_API_KEY
     })
   );
 
@@ -67,39 +61,18 @@ export default component$(() => {
           </>
         )}
       />
-      <Resource
-        value={allNewsResource}
-        onPending={() => <>Loading ...</>}
-        onRejected={(error) => <>Error: {error.message}</>}
-        onResolved={(latestNews) => (
-          <>
-            <div class="col-span-6 relative inline md:hidden">
-              <div class="top-0 px-2.5">
-                <div class="h-[20vh]">
-                  <h2 class="text-white text-5xl font-bold uppercase pt-[10vh]">Latest News</h2>
-                </div>
-              </div>
+      <>
+        <div class="col-span-6 relative inline md:hidden">
+          <div class="top-0 px-2.5">
+            <div class="h-[20vh]">
+              <h2 class="text-white text-5xl font-bold uppercase pt-[10vh]">Latest News</h2>
             </div>
-            <div class="col-span-6 mb-[5vh] inline md:hidden">
-              <div class="overflow-x-scroll snap-x scroll-normal flex p-2.5">
-                {latestNews.results.map((latest:any, index:any) => (
-                  <div key={index} class="snap-center">
-                    <div class="grid grid-cols-1 gap-0 w-[75vw]">
-                      <div class="h-[50vh] pr-2.5">
-                        <Image src={latest.data.mainImage} class="object-cover w-full h-full" />
-                      </div> 
-                      <div class="text-white px-2.5 py-2.5">
-                        <h3 class="font-semibold text-lg">{latest.data.title}</h3>
-                        <p class="font-dm pt-5 text-sm">{latest.data.description}</p>
-                      </div>               
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </>
-        )}
-      />
+          </div>
+        </div>
+        <div class="col-span-6 mb-[5vh] inline md:hidden">
+          <LatestNewsSlider model="latest-news" />
+        </div>
+      </>
     </section>
   )
 });
