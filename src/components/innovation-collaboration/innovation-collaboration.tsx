@@ -1,4 +1,4 @@
-import { component$, Resource, useResource$, useSignal } from "@builder.io/qwik";
+import { component$, Resource, useResource$ } from "@builder.io/qwik";
 import { fetchEntries } from "@builder.io/sdk-qwik";
 import { Image } from '@unpic/qwik';
 import InnoCollabSlider from "../ui/inno-collab-slider";
