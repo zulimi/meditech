@@ -2,7 +2,7 @@ import { component$, Resource, useResource$ } from "@builder.io/qwik";
 import { fetchEntries } from "@builder.io/sdk-qwik";
 import { Image } from '@unpic/qwik';
 
-export default component$<feedProps>((props) => {
+export default component$(() => {
 
   const allNewsResources = useResource$<any>(() => 
     fetchEntries({
