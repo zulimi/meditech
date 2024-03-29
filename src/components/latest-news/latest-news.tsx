@@ -70,7 +70,7 @@ export default component$(() => {
           </div>
         </div>
         <div class="col-span-6 mb-[5vh] inline md:hidden">
-          <LatestNewsSlider model="latest-news" />
+          <LatestNewsSlider />
         </div>
       </>
     </section>
