@@ -2,18 +2,13 @@ import { component$, Resource, useResource$ } from "@builder.io/qwik";
 import { fetchEntries } from "@builder.io/sdk-qwik";
 import { Image } from '@unpic/qwik';
 
-interface feedProps {
-  model?: string
-  limit?: number
-}
-
 export default component$<feedProps>((props) => {
 
   const feedResources = useResource$<any>(() => 
     fetchEntries({
-      model: props.model,
+      model: "inno-collab",
       apiKey: import.meta.env.PUBLIC_BUILDER_API_KEY,
-      limit: props.limit
+      limit: 4
     })
   )
 
