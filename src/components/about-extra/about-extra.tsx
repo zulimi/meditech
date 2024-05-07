@@ -3,10 +3,10 @@ import { Image } from '@unpic/qwik';
 
 export default component$((props: { extraPhoto: string }) => {
   return (
-    <section class="grid grid-cols-6 gap-0 py-[25vh]">
-      <div class="col-span-5 col-start-2 h-full grid grid-cols-5 gap-0">
+    <section class="grid grid-cols-6 gap-0 pt-[10vh] md:pt-[25vh] pb-[10vh] md:pb-0">
+      <div class="col-span-6 md:col-span-5 md:col-start-2 h-full grid grid-cols-5 gap-0">
         <div class="top-0 col-span-2 px-2.5 ">
-          <div class="h-[50vh]">
+          <div class="md:h-[50vh]">
             <Image src={props.extraPhoto} layout="fullWidth" />
           </div>
         </div>
