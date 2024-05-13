@@ -17,14 +17,14 @@ export default component$((props: {imageSurgical: string, imageExam: string}) =>
   const showExamPowderFreeNitrile = useSignal(false);
 
   return (
-    <section class="grid grid-cols-6 gap-0 py-[25vh]">
-      <div class="col-span-5 col-start-2 h-full grid grid-cols-5 gap-0 pb-[12.5vh]">
-        <div class="top-0 col-span-2 px-2.5 ">
-          <div class="h-[50vh] border-t border-t-biru">
+    <section class="grid grid-cols-6 gap-0 py-20 md:py-[25vh]">
+      <div class="col-span-6 md:col-span-5 md:col-start-2 h-full grid grid-cols-5 gap-0 pb-[12.5vh]">
+        <div class="top-0 col-span-5 md:col-span-2 px-2.5 ">
+          <div class="h-[10vh] md:h-[50vh] border-t border-t-biru">
             <h2 class="text-biru text-5xl font-bold uppercase pt-2.5">Surgical</h2>
           </div>
         </div>
-        <div class="col-span-3 px-2.5">
+        <div class="col-span-6 md:col-span-3 px-2.5">
           <div class="w-full h-[50vh] border border-biru">
             <Image src={props.imageSurgical} class="object-cover w-full h-full" />
           </div>
@@ -40,13 +40,13 @@ export default component$((props: {imageSurgical: string, imageExam: string}) =>
           </div>
         </div>
       </div>
-      <div class="col-span-5 col-start-2 h-full grid grid-cols-5 gap-0">
-      <div class="top-0 col-span-2 px-2.5 ">
-          <div class="h-[50vh] border-t border-t-biru">
+      <div class="col-span-6 md:col-span-5 md:col-start-2 h-full grid grid-cols-5 gap-0">
+      <div class="top-0 col-span-5 md:col-span-2 px-2.5 ">
+          <div class="h-[10vh] md:h-[50vh] border-t border-t-biru">
             <h2 class="text-biru text-5xl font-bold uppercase pt-2.5">Exam</h2>
           </div>
         </div>
-        <div class="col-span-3 px-2.5">
+        <div class="col-span-6 md:col-span-3 px-2.5">
           <div class="w-full h-[50vh] border border-biru">
             <Image src={props.imageExam} class="object-cover w-full h-full" />
           </div>
@@ -70,8 +70,8 @@ export default component$((props: {imageSurgical: string, imageExam: string}) =>
         <div class="fixed top-0 left-0 w-screen h-screen z-50 backdrop-blur">
           <button
             onClick$={() => (showSurgPowderFreeLatex.value = false)}
-            class="p-10 text-biru absolute right-0 top-0">
-            <HiXMarkOutline class="inline text-6xl"></HiXMarkOutline>
+            class="p-5 md:p-10 text-biru absolute right-0 top-0">
+            <HiXMarkOutline class="inline text-3xl md:text-6xl"></HiXMarkOutline>
           </button>
           <Product subCategory="Powder-free Latex" category="Surgical" />
         </div>
@@ -80,8 +80,8 @@ export default component$((props: {imageSurgical: string, imageExam: string}) =>
         <div class="fixed top-0 left-0 w-screen h-screen z-50 backdrop-blur">
           <button
             onClick$={() => (showSurgPowderedLatex.value = false)}
-            class="p-10 text-biru absolute right-0 top-0">
-            <HiXMarkOutline class="inline text-6xl"></HiXMarkOutline>
+            class="p-10 md:p-10 text-biru absolute right-0 top-0">
+            <HiXMarkOutline class="inline text-3xl md:text-6xl"></HiXMarkOutline>
           </button>
           <Product subCategory="Powdered Latex" category="Surgical" />
         </div>
@@ -90,8 +90,8 @@ export default component$((props: {imageSurgical: string, imageExam: string}) =>
         <div class="fixed top-0 left-0 w-screen h-screen z-50 backdrop-blur">
           <button
             onClick$={() => (showExamPowderFreeLatex.value = false)}
-            class="p-10 text-biru absolute right-0 top-0">
-            <HiXMarkOutline class="inline text-6xl"></HiXMarkOutline>
+            class="p-10 md:p-10 text-biru absolute right-0 top-0">
+            <HiXMarkOutline class="inline text-3xl md:text-6xl"></HiXMarkOutline>
           </button>
           <Product subCategory="Powder-free Latex" category="Exam" />
         </div>
@@ -100,8 +100,8 @@ export default component$((props: {imageSurgical: string, imageExam: string}) =>
         <div class="fixed top-0 left-0 w-screen h-screen z-50 backdrop-blur">
           <button
             onClick$={() => (showExamPowderedLatex.value = false)}
-            class="p-10 text-biru absolute right-0 top-0">
-            <HiXMarkOutline class="inline text-6xl"></HiXMarkOutline>
+            class="p-10 md:p-10 text-biru absolute right-0 top-0">
+            <HiXMarkOutline class="inline text-3xl md:text-6xl"></HiXMarkOutline>
           </button>
           <Product subCategory="Powdered Latex" category="Exam" />
         </div>
@@ -110,8 +110,8 @@ export default component$((props: {imageSurgical: string, imageExam: string}) =>
         <div class="fixed top-0 left-0 w-screen h-screen z-50 backdrop-blur">
           <button
             onClick$={() => (showExamPowderFreeNitrile.value = false)}
-            class="p-10 text-biru absolute right-0 top-0">
-            <HiXMarkOutline class="inline text-6xl"></HiXMarkOutline>
+            class="p-10 md:p-10 text-biru absolute right-0 top-0">
+            <HiXMarkOutline class="inline text-3xl md:text-6xl"></HiXMarkOutline>
           </button>
           <Product subCategory="Powder-free Nitrile" category="Exam" />
         </div>
@@ -139,11 +139,11 @@ export const Product = component$<ProductProps>((props) => {
             <p class="text-white font-semibold text-3xl">{props.category}</p>
             <p class="text-white font-semibold text-3xl">{props.subCategory}</p>
           </div>
-          <div class="grid grid-cols-3 w-full overflow-hidden">
+          <div class="flex flex-row w-full overflow-x-scroll snap-x no-scrollbar">
             {products.results
             .filter((product: any) => product.data.subCategory.name === props.subCategory && product.data.subCategory.categories.name === props.category)
             .map((product:any, index:any) => (
-              <a key={index} href={"/products/"+product.id} class="block h-[50vh] first:ml-0 ml-[-1px] object-contain font-semibold text-white border border-white grid grid-cols-1 relative">
+              <a key={index} href={"/products/"+product.id} class="block w-[55vw] md:w-[25vw] h-[50vh] first:ml-0 ml-[-1px] object-contain font-semibold text-white border border-white grid grid-cols-1 relative grow-0 shrink-0 snap-center">
                 <Image src={product.data.image} layout="constrained" class="p-10 place-self-center"></Image>
                 <p class="absolute text-2xl bottom-5 left-5">{product.data.name}</p>
               </a>
