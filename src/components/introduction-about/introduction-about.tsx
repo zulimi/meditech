@@ -6,7 +6,7 @@ export default component$((props: { aboutTitle: string, aboutDescription: string
   return (
     <section class="grid grid-cols-12 grid-rows-4 gap-0 h-screen relative">
       <div class="md:col-start-3 col-span-12 md:col-span-7 row-span-2 md:row-span-1 px-2.5 pb-2.5 pt-20 md:pt-2.5 z-10">
-        <p class="text-biru font-bold text-6xl text-7xl uppercase">
+        <p class="text-biru font-bold text-6xl md:text-7xl uppercase">
           {props.aboutTitle}
         </p>
       </div>
